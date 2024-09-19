@@ -28,15 +28,10 @@ if(isset($_POST['login']))
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
-	<!--[if lt IE 9]>
-	<script src="js/html5shiv.js"></script>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
 </head>
 <body style=" background-color:#08a4a7">
 	<div class="row">
 		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
-		<!-- <center><h2><b>Park Anywhere</b></h2></center> -->
 		<center><img src="Park Anywhere LOGO.png" alt="Logo" style="border-radius: 20%; width: 350px; height: 80px;border:0px solid teal;"></center>
 			<div  style="border-radius: 3%;background-color:#007575; class="login-panel panel panel-default">
 				<br>

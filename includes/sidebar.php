@@ -8,7 +8,16 @@
 			<div class="profile-usertitle">
 				<!-- ADMINISTRATOR NAME & Status-->
 				<div style="color:white" class="profile-usertitle-name">
-					<b>Mr.Elon Musk</b>
+					<strong>
+						<?php
+							$adminid=$_SESSION['vpmsaid'];
+							$ret=mysqli_query($con,"SELECT * from admin where ID='$adminid'");
+							$cnt=1;
+							while ($row=mysqli_fetch_array($ret)) {
+								echo $welcome_string, $row['AdminName']; 
+							}
+						?>
+					</strong>
 				</div>
 				<div style="color:white" class="profile-usertitle-status">
 					<span class="indicator label-success"></span>

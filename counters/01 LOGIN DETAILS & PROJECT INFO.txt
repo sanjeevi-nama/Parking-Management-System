@@ -7,20 +7,23 @@
 **
     Team Member Details:
     Team Leader Name    : 	B. Sri Krishna Tarun (21A31A05A3)
-    Team Member 1 Name	: 	K. Ajay Sai Prasan (21A31A05B2) 
-    Team Member 2 Name	: 	K. Ram Sai (21A31A05B3)
-    Team Member 3 Name	: 	Y. Reshma Chowdary (21A31A0599)
-    Team Member 4 Name	: 	N.H.V. Sanjeevi (21A31A0586)
-    Team Member 5 Name	: 	Ch.P.R.S. Santhoshi (21A31A0570)
+    Team Member 2 Name	: 	K. Ajay Sai Prasan (21A31A05B2) 
+    Team Member 3 Name	: 	K. Ram Sai (21A31A05B3)
+    Team Member 4 Name	: 	Y. Reshma Chowdary (21A31A0599)
+    Team Member 5 Name	: 	N.H.V. Sanjeevi (21A31A0586)
+    Team Member 6 Name	: 	Ch.P.R.S. Santhoshi (21A31A0570)
     
     Team Mentor Name: 
     G. Vijaya Kumar (Asst. Professor)
 **
 
-**Recommended PHP Version 5.6 or Newer**
-
-
 **Login Details**
 
 Username: admin
 Password: Password@123
+
+**
+    Contact details : 
+        +91 9014619414, 
+        21a31a05a3@pragati.ac.in
+**

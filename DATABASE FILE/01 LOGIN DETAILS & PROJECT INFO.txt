@@ -1,8 +1,12 @@
 
 **Database Name: vehicle-parking-db**
 
+<<<<<<< HEAD
 **Developed by Team Innovatros-Tech**
 
+=======
+**Developed by Team Innovators-Tech**
+>>>>>>> f4828b834c77a74f941e4b57231e904d69e518b0
 
 **Login Details**
 

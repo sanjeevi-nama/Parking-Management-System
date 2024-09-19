@@ -17,7 +17,7 @@
 			
 		$query=mysqli_query($con, "INSERT into vehicle_info(ParkingNumber,VehicleCategory,RegistrationNumber,OwnerName,OwnerContactNumber) value('$parkingnumber','$catename','$vehreno','$ownername','$ownercontno')");
 		if ($query) {
-			//Vehicle added popu-up
+			//Vehicle added pop-up
 			echo "<script>alert('Vehicle Entry Detail has been added');</script>"; 
 			echo "<script>window.location.href ='dashboard.php'</script>";//later takes to Dashboard
 		} 
@@ -89,13 +89,11 @@
 									<?php } ?> 
 									</select>
 								</div>
-								
 
 							<div class="form-group">
 								<label>Owner's Full Name</label>
 								<input type="text" class="form-control" placeholder="Enter Here.." id="ownername" name="ownername" required>
 							</div>
-
 
 							<div class="form-group">
 								<label>Owner's Contact</label>
@@ -109,26 +107,6 @@
 				</div>
         <?php include 'includes/footer.php'?>
 	</div>	
-<!-- 	
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
-	<script src="js/easypiechart.js"></script>
-	<script src="js/easypiechart-data.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
-	<script src="js/custom.js"></script>
-	<script>
-		window.onload = function () {
-		var chart1 = document.getElementById("line-chart").getContext("2d");
-		window.myLine = new Chart(chart1).Line(lineChartData, {
-		responsive: true,
-		scaleLineColor: "rgba(0,0,0,.2)",
-		scaleGridLineColor: "rgba(0,0,0,.05)",
-		scaleFontColor: "#c5c7cc"
-		});
-};
-	</script> -->
 		
 </body>
 </html>

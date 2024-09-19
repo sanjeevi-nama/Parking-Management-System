@@ -18,7 +18,7 @@
     $ret=mysqli_query($con,"SELECT * from admin where ID='$adminid'");
     $cnt=1;
     while ($row=mysqli_fetch_array($ret)) {
-    
-        echo $welcome_string, $row['AdminName']; }
- 
+        echo $welcome_string, $row['AdminName']; 
+    }
+
 ?>
