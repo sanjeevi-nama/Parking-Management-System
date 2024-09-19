@@ -12,7 +12,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>VPS</title>
+	<title>Park Anywhere</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/datatable.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 </head>
-<body>
+<body style="background-color:#CDE8E5">
         <?php include 'includes/navigation.php' ?>
 	
 		<?php
@@ -39,13 +39,12 @@
 				</a></li>
 				<li class="active">Incoming Vehicle Management</li>
 			</ol>
-		</div><!--/.row-->
+		</div>
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<!-- <h1 class="page-header">Vehicle Management</h1> -->
 			</div>
-		</div><!--/.row-->
+		</div>
 		
 		<div class="row">
 				<div class="col-lg-12">
@@ -102,15 +101,15 @@
 				
 				
 				
-</div><!--/.row-->
+</div>
 		
 		
 		
 
         <?php include 'includes/footer.php'?>
-	</div>	<!--/.main-->
+	</div>	
 	
-	<script src="js/jquery-1.11.1.min.js"></script>
+	<!-- <script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/chart.min.js"></script>
 	<script src="js/chart-data.js"></script>
@@ -137,7 +136,7 @@
     $('#example').DataTable();
 } );
     </script>
-		
+		 -->
 </body>
 </html>
 

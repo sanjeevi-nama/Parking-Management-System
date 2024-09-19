@@ -17,9 +17,11 @@
 			
 		$query=mysqli_query($con, "INSERT into vehicle_info(ParkingNumber,VehicleCategory,RegistrationNumber,OwnerName,OwnerContactNumber) value('$parkingnumber','$catename','$vehreno','$ownername','$ownercontno')");
 		if ($query) {
-			echo "<script>alert('Vehicle Entry Detail has been added');</script>";
-			echo "<script>window.location.href ='dashboard.php'</script>";
-		} else {
+			//Vehicle added popu-up
+			echo "<script>alert('Vehicle Entry Detail has been added');</script>"; 
+			echo "<script>window.location.href ='dashboard.php'</script>";//later takes to Dashboard
+		} 
+		else {
 			echo "<script>alert('Something Went Wrong');</script>";       
 		}
 	}
@@ -30,7 +32,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>VPS</title>
+	<title>Park Anywhere</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
@@ -40,7 +42,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 </head>
-<body>
+<body style="background-color:#CDE8E5">
         <?php include 'includes/navigation.php' ?>
 	
 		<?php
@@ -56,67 +58,58 @@
 				</a></li>
 				<li class="active">Manage Vehicle</li>
 			</ol>
-		</div><!--/.row-->
-		
+		</div>
 		<div class="row">
 			<div class="col-lg-12">
-				<!-- <h1 class="page-header">Vehicle Management</h1> -->
 			</div>
-		</div><!--/.row-->
-		
+		</div>
 		<div class="panel panel-default">
-					<div class="panel-heading">Vehicle Entry</div>
-					<div class="panel-body">
+				<div class="panel-heading">Vehicle Entry</div>
+				<div class="panel-body">
 
-						<div class="col-md-12">
+					<div class="col-md-12">
 
-							<form method="POST">
+						<form method="POST">
 
+							<div class="form-group">
+								<label>Registration Number</label>
+								<input type="text" class="form-control" placeholder="Eg. AP 31 BM 9963" id="vehreno" name="vehreno" required>
+							</div>
+							
+					
 								<div class="form-group">
-									<label>Registration Number</label>
-									<input type="text" class="form-control" placeholder="LOL-1869" id="vehreno" name="vehreno" required>
+									<label>Vehicle Category</label>
+									<select class="form-control" name="catename" id="catename">
+									<option value="0">Select Category</option>
+									<?php $query=mysqli_query($con,"select * from vcategory");
+										while($row=mysqli_fetch_array($query))
+										{
+										?>    
+									<option value="<?php echo $row['VehicleCat'];?>"><?php echo $row['VehicleCat'];?></option>
+									<?php } ?> 
+									</select>
 								</div>
 								
-						
-									<div class="form-group">
-										<label>Vehicle Category</label>
-										<select class="form-control" name="catename" id="catename">
-										<option value="0">Select Category</option>
-										<?php $query=mysqli_query($con,"select * from vcategory");
-											while($row=mysqli_fetch_array($query))
-											{
-											?>    
-                                        <option value="<?php echo $row['VehicleCat'];?>"><?php echo $row['VehicleCat'];?></option>
-                  						<?php } ?> 
-										</select>
-									</div>
-									
 
-								<div class="form-group">
-									<label>Owner's Full Name</label>
-									<input type="text" class="form-control" placeholder="Enter Here.." id="ownername" name="ownername" required>
-								</div>
+							<div class="form-group">
+								<label>Owner's Full Name</label>
+								<input type="text" class="form-control" placeholder="Enter Here.." id="ownername" name="ownername" required>
+							</div>
 
 
-								<div class="form-group">
-									<label>Owner's Contact</label>
-									<input type="text" class="form-control" placeholder="Enter Here.." maxlength="10" pattern="[0-9]+" id="ownercontno" name="ownercontno" required>
-								</div>
-
-
-									<button type="submit" class="btn btn-success" name="submit-vehicle">Submit</button>
-									<button type="reset" class="btn btn-default">Reset</button>
-								</div> <!--  col-md-12 ends -->
-							</form>
-						</div> 
-					</div>
-		
-		
-		
-
+							<div class="form-group">
+								<label>Owner's Contact</label>
+								<input type="text" class="form-control" placeholder="Enter Here.." maxlength="10" pattern="[0-9]+" id="ownercontno" name="ownercontno" required>
+							</div>
+								<button type="submit" class="btn btn-success" name="submit-vehicle">Submit</button>
+								<button type="reset" class="btn btn-default">Reset</button>
+							</div> 
+						</form>
+					</div> 
+				</div>
         <?php include 'includes/footer.php'?>
-	</div>	<!--/.main-->
-	
+	</div>	
+<!-- 	
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/chart.min.js"></script>
@@ -135,7 +128,7 @@
 		scaleFontColor: "#c5c7cc"
 		});
 };
-	</script>
+	</script> -->
 		
 </body>
 </html>

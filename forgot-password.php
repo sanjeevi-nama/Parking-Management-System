@@ -28,10 +28,6 @@ if(isset($_POST['reset'])){
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
-	<!--[if lt IE 9]>
-	<script src="js/html5shiv.js"></script>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
 </head>
 <body>
 	<div class="row">
@@ -46,25 +42,24 @@ if(isset($_POST['reset'])){
 						$msg
 						<a href='#' class='pull-right'>
 						<em class='fa fa-lg fa-close'>
-						</em></a></div>" ?> 
-                        
-
-						<fieldset>
-							<div class="form-group">
-								<input class="form-control" placeholder="Security Code" name="secode" type="text" autofocus="" required>
-							</div>
-							<div class="form-group">
-								<input class="form-control" placeholder="Email ID" name="email" type="email" required>
-							</div>
-							
-							<button class="btn btn-primary" type="submit" name="reset">Proceed</button>
-                            <a href="index.php"><button class="btn btn-info" type="button">Back</button></a>
-                            </fieldset>
+						</em></a></div>" 
+					?> 
+					<fieldset>
+						<div class="form-group">
+							<input class="form-control" placeholder="Security Code" name="secode" type="text" autofocus="" required>
+						</div>
+						<div class="form-group">
+							<input class="form-control" placeholder="Email ID" name="email" type="email" required>
+						</div>
+						
+						<button class="btn btn-primary" type="submit" name="reset">Proceed</button>
+						<a href="index.php"><button class="btn btn-info" type="button">Back</button></a>
+					</fieldset>
 					</form>
 				</div>
 			</div>
-		</div><!-- /.col-->
-	</div><!-- /.row -->	
+		</div>
+	</div>	
 	
 
 <script src="js/jquery-1.11.1.min.js"></script>

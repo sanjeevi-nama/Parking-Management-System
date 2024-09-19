@@ -16,6 +16,8 @@
         $query=mysqli_query($con, "UPDATE vehicle_info set Remark='$remark',Status='$status',ParkingCharge='$parkingcharge' where ID='$cid'");
         if ($query) {
             $msg="All remarks has been updated.";
+			//Takes to Dashboard after finishing the action
+			echo "<script>window.location.href ='dashboard.php'</script>";
         } else {
             $msg="Something Went Wrong";
         }
@@ -55,13 +57,12 @@
 				</a></li>
 				<li class="active">Vehicle Category Management</li>
 			</ol>
-		</div><!--/.row-->
+		</div>
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<!-- <h1 class="page-header">Vehicle Management</h1> -->
 			</div>
-		</div><!--/.row-->
+		</div>
 		
 		<div class="row">
 				<div class="col-lg-12">
@@ -118,87 +119,39 @@
 									<label>Vehicle Owned By</label>
 									<input type="text" class="form-control" value="<?php  echo $row['OwnerName'];?>" id="sdesc" name="sdesc" readonly>
 								</div>
-
-
                                 <div class="form-group">
 									<label>Vehicle Owner Contact</label>
 									<input type="text" class="form-control" value="<?php  echo $row['OwnerContactNumber'];?>" id="sdesc" name="sdesc" readonly>
 								</div>
-
-
                                 <div class="form-group">
 									<label>Current Status</label>
 									<input type="text" class="form-control" value="<?php if($row['Status']==""){ echo "Vehicle In"; } if($row['Status']=="Out"){echo "Vehicle out";} ;?>" id="sdesc" name="sdesc" readonly>
 								</div>
-
-
                                 <div class="form-group">
 									<label>Total Charge</label>
 									<input type="number" class="form-control" placeholder="" id="parkingcharge" name="parkingcharge" required>
 								</div>
-
-
                                 <div class="form-group">
 									<label>Status</label>
 									<select name="status" class="form-control" required="true" >
                                         <option value="Out">Outgoing Vehicle</option>
                                     </select>
 								</div>
-
-
                                 <div class="form-group">
 									<label>Remarks</label>
 									<input type="text" class="form-control" placeholder="" id="remark" name="remark" required>
 								</div>
-								
                         <?php } ?>
-
 									<button type="submit" class="btn btn-success" name="submit-in">Submit For Out-Going</button>
 									<button type="reset" class="btn btn-default">Reset</button>
                                     
-								</div> <!--  col-md-12 ends -->
-
-
+								</div>
 						</div>
 					</div>
 				</div>
-				
-				
-				
-</div><!--/.row-->
-		
-		
-		
-
-        <?php include 'includes/footer.php'?>
-	</div>	<!--/.main-->
-	
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
-	<script src="js/easypiechart.js"></script>
-	<script src="js/easypiechart-data.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
-	<script src="js/custom.js"></script>
-	<script>
-		window.onload = function () {
-		var chart1 = document.getElementById("line-chart").getContext("2d");
-		window.myLine = new Chart(chart1).Line(lineChartData, {
-		responsive: true,
-		scaleLineColor: "rgba(0,0,0,.2)",
-		scaleGridLineColor: "rgba(0,0,0,.05)",
-		scaleFontColor: "#c5c7cc"
-		});
-};
-	</script>
-
-    <script>
-        $(document).ready(function() {
-    $('#example').DataTable();
-} );
-    </script>
-		
+</div>
+	 <?php include 'includes/footer.php'?>
+	</div>	
 </body>
 </html>
 

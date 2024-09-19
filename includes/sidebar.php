@@ -1,5 +1,5 @@
 <!-- SIDEBAR - THE MENU OPTIONS IN THE LEFT OF DASHBOARD  -->
-	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+	<div style="background-color:#00A3A3" id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<div class="profile-sidebar">
 			<div class="profile-userpic">
 				<!-- ADMINISTRATOR IMAGE -->
@@ -7,8 +7,13 @@
 			</div>
 			<div class="profile-usertitle">
 				<!-- ADMINISTRATOR NAME & Status-->
-				<div class="profile-usertitle-name">Mr.Elon Musk</div>
-				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+				<div style="color:white" class="profile-usertitle-name">
+					<b>Mr.Elon Musk</b>
+				</div>
+				<div style="color:white" class="profile-usertitle-status">
+					<span class="indicator label-success"></span>
+					<b>Online</b>
+				</div>
 			</div>
 			<div class="clear"></div>
 		</div>

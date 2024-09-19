@@ -12,7 +12,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>VPS</title>
+	<title>Park Anywhere</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/datatable.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 </head>
-<body>
+<body style="background-color:#CDE8E5">
         <?php include 'includes/navigation.php' ?>
 	
 		<?php
@@ -39,13 +39,12 @@
 				</a></li>
 				<li class="active">Outgoing Vehicle Management</li>
 			</ol>
-		</div><!--/.row-->
+		</div>
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<!-- <h1 class="page-header">Vehicle Management</h1> -->
 			</div>
-		</div><!--/.row-->
+		</div>
 		
 		<div class="row">
 				<div class="col-lg-12">
@@ -56,7 +55,7 @@
                         
         <thead>
             <tr>
-                <th>#</th>
+                <th>S.No</th>
                 <th>Vehicle No.</th>
                 <th>Category</th>
                 <th>Parking Number</th>
@@ -68,7 +67,7 @@
         </thead>
         <tbody>
         <?php
-        // $cid=$_GET['viewid'];
+
         $ret=mysqli_query($con,"SELECT * from  vehicle_info where Status='Out'");
         $cnt=1;
         while ($row=mysqli_fetch_array($ret)) {
@@ -97,52 +96,16 @@
 
                 <?php $cnt=$cnt+1;}?>
  
-        
         </tbody>
-
     </table>
 						</div>
 					</div>
-				</div>
-				
-				
-				
-</div><!--/.row-->
-		
-		
+				</div>	
+</div>
 		
 
         <?php include 'includes/footer.php'?>
-	</div>	<!--/.main-->
-	
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
-	<script src="js/easypiechart.js"></script>
-	<script src="js/easypiechart-data.js"></script>
-	<script src="js/jquery.dataTables.min.js"></script>
-    <script src="js/dataTables.bootstrap4.min.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
-	<script src="js/custom.js"></script>
-	<script>
-		window.onload = function () {
-		var chart1 = document.getElementById("line-chart").getContext("2d");
-		window.myLine = new Chart(chart1).Line(lineChartData, {
-		responsive: true,
-		scaleLineColor: "rgba(0,0,0,.2)",
-		scaleGridLineColor: "rgba(0,0,0,.05)",
-		scaleFontColor: "#c5c7cc"
-		});
-};
-	</script>
-
-    <script>
-        $(document).ready(function() {
-    $('#example').DataTable();
-} );
-    </script>
-		
+	</div>	
 </body>
 </html>
 
