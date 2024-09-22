@@ -19,7 +19,7 @@
 
 **Login Details**
 
-Username: admin
+Username: admin1
 Password: Password@123
 
 **
