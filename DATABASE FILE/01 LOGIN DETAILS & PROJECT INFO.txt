@@ -2,7 +2,7 @@
 **Database Name: vehicle-parking-db**
 
 <<<<<<< HEAD
-**Developed by Team Innovatros-Tech**
+**Developed by Team Innovators-Tech**
 
 =======
 **Developed by Team Innovators-Tech**
